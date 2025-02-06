@@ -104,7 +104,7 @@ Para mantener el código limpio y organizado:
    ```
 
 ## 📌 Contacto
-Si tienes alguna duda, puedes contactarnos a través de **[correo@ejemplo.com](mailto:correo@ejemplo.com)** o abrir un Issue en GitHub. 😊
+Si tienes alguna duda, puedes abrir un Issue en GitHub. 😊
 
 ---
 ¡Gracias por colaborar en **Young Essence**! 💙🚀
