@@ -17,7 +17,7 @@ Sigue estos pasos para configurar el entorno de desarrollo:
 1. **Clonar el repositorio:**
    ```sh
    git clone https://github.com/tu-usuario/young-essence.git
-   cd young-essence
+   cd young_essence
    ```
 
 2. **Instalar dependencias:**
