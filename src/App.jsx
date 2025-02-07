@@ -19,7 +19,7 @@ function App() {
       <h1>Young Essence</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          {/*  count is {count} */}
+          Contador {count}
         </button>
       </div>
     </>
