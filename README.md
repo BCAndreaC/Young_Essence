@@ -57,30 +57,6 @@ Sigue estos pasos para configurar el entorno de desarrollo:
 | `npm run preview` | Previsualiza la versión de producción localmente. |
 | `npm run lint`  | Ejecuta el linter para verificar errores de código. |
 
-## ✨ Configuración de Tailwind CSS
-Este proyecto usa **Tailwind CSS** para los estilos. Asegúrate de que `tailwind.config.js` tenga la configuración correcta:
-
-```js
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
-```
-
-Y que `src/index.css` incluya:
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
 ## ✨ Convenciones de Código
 Para mantener el código limpio y organizado:
 - Usamos **TailwindCSS** para estilos.
