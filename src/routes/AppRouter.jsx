@@ -5,6 +5,7 @@ import Ropa from "../pages/categories/Ropa";
 import Cart from "../pages/Cart";
 import Home from "../pages/Home";
 import Footer from "../components/Footer";
+import Cuenta from "../pages/Account";
 import logoSrc from "../assets/ye.png";
 
 const logo = {
@@ -31,6 +32,7 @@ const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/categories" element={<Categories />} />
+        <Route path="/account" element={<Cuenta />} />
         <Route path="/categories/ropa" element={<Ropa />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
