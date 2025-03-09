@@ -6,6 +6,7 @@ import Cart from "../pages/Cart";
 import Home from "../pages/Home";
 import Footer from "../components/Footer";
 import Cuenta from "../pages/Account";
+import HelpPage from "../pages/HelpPage";
 import logoSrc from "../assets/ye.png";
 
 const logo = {
@@ -18,7 +19,8 @@ const menuItems = [
   { label: "Inicio", link: "/" },
   { label: "Categorías", link: "/categories" },
   { label: "Cuenta", link: "/account" },
-  { label: "Carrito", link: "/cart" }
+  { label: "Carrito", link: "/cart" },
+  { label: "Ayuda", link: "/help" }
 ];
 
 const buttons = [
@@ -35,6 +37,7 @@ const AppRouter = () => {
         <Route path="/account" element={<Cuenta />} />
         <Route path="/categories/ropa" element={<Ropa />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/help" element={<HelpPage />} />
       </Routes>
       <Footer />
     </Router>

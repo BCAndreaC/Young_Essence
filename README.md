@@ -16,7 +16,7 @@ Sigue estos pasos para configurar el entorno de desarrollo:
 
 1. **Clonar el repositorio:**
    ```sh
-   git clone https://github.com/tu-usuario/young-essence.git
+   git clone https://github.com/tu-usuario/young_essence.git
    cd young_essence
    ```
 
@@ -57,30 +57,6 @@ Sigue estos pasos para configurar el entorno de desarrollo:
 | `npm run preview` | Previsualiza la versión de producción localmente. |
 | `npm run lint`  | Ejecuta el linter para verificar errores de código. |
 
-## ✨ Configuración de Tailwind CSS
-Este proyecto usa **Tailwind CSS** para los estilos. Asegúrate de que `tailwind.config.js` tenga la configuración correcta:
-
-```js
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
-```
-
-Y que `src/index.css` incluya:
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
 ## ✨ Convenciones de Código
 Para mantener el código limpio y organizado:
 - Usamos **TailwindCSS** para estilos.
@@ -104,7 +80,7 @@ Para mantener el código limpio y organizado:
    ```
 
 ## 📌 Contacto
-Si tienes alguna duda, puedes contactarnos a través de **[correo@ejemplo.com](mailto:correo@ejemplo.com)** o abrir un Issue en GitHub. 😊
+Si tienes alguna duda, puedes abrir un Issue en GitHub. 😊
 
 ---
 ¡Gracias por colaborar en **Young Essence**! 💙🚀
