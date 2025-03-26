@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import Cuenta from "../pages/Account";
 import HelpPage from "../pages/HelpPage";
 import logoSrc from "../assets/ye.png";
+import Pagos from "../pages/Pagos";
 
 const logo = {
   src: logoSrc,
@@ -20,7 +21,8 @@ const menuItems = [
   { label: "Categorías", link: "/categories" },
   { label: "Cuenta", link: "/account" },
   { label: "Carrito", link: "/cart" },
-  { label: "Ayuda", link: "/help" }
+  { label: "Ayuda", link: "/help" },
+  { label: "Pagos", link: "/pagos" }
 ];
 
 const buttons = [
@@ -38,6 +40,7 @@ const AppRouter = () => {
         <Route path="/categories/ropa" element={<Ropa />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/help" element={<HelpPage />} />
+        <Route path="/pagos" element={<Pagos />} />
       </Routes>
       <Footer />
     </Router>
