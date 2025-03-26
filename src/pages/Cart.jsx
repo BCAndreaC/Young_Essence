@@ -39,7 +39,7 @@ export default function Cart() {
 
   const handleButtonClick = () => {
     setOpen(false);
-    navigate('/');
+    navigate('/pagos');
   }
 
   return (
@@ -116,13 +116,12 @@ export default function Cart() {
                   </div>
                   <p className="mt-0.5 text-sm text-gray-500">El envío y los impuestos se calculan al finalizar la compra.</p>
                   <div className="mt-6">
-                    <a
-                      href="#"
-                      style={{ color: '#ffff' }}
-                      className="flex items-center justify-center rounded-md border border-transparent bg-purple-900 px-6 py-3 text-base font-medium shadow-xs"
+                    <button
+                      onClick={handleButtonClick}
+                      className="flex items-center text-white justify-center rounded-md border border-transparent bg-purple-900 px-6 py-3 text-base font-medium shadow-xs"
                     >
                       Finalizar compra
-                    </a>
+                    </button>
                   </div>
                   <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                       <button
