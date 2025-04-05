@@ -1,33 +1,32 @@
-name: Deploy to GitHub Pages  # Nombre del workflow
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]  # Se ejecuta al hacer push a la rama "main"
+    branches: [ main ]
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest  # Usa un servidor con Ubuntu
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
-      # Paso 1: Descarga tu código del repositorio
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      # Paso 2: Instala Node.js
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Usa Node.js 18 (o la versión que necesites)
+          node-version: '18'
 
-      # Paso 3: Instala dependencias y genera la carpeta "dist/"
-      - name: Install dependencies and build
+      - name: Install and build
         run: |
           npm install
           npm run build
 
-      # Paso 4: Despliega en GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Token de GitHub (automático)
-          publish_dir: ./dist  # Carpeta que se desplegará
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          keep_files: true
