@@ -31,7 +31,7 @@ const buttons = [
 
 const AppRouter = () => {
   return (
-    <Router basename="/BCAndreaC">
+    <Router basename="/Young_Essence">
       <Navbar logo={logo} menuItems={menuItems} buttons={buttons} />
       <Routes>
         <Route path="/" element={<Home />} />
