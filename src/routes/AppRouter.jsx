@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Categories from "../pages/Categories";
 import Ropa from "../pages/categories/Ropa";
@@ -31,7 +31,7 @@ const buttons = [
 
 const AppRouter = () => {
   return (
-    <Router>
+    <BrowserRouter basename="/Young_Essence"> 
       <Navbar logo={logo} menuItems={menuItems} buttons={buttons} />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -43,7 +43,7 @@ const AppRouter = () => {
         <Route path="/pagos" element={<Pagos />} />
       </Routes>
       <Footer />
-    </Router>
+    </BrowserRouter>
   );
 };
 
