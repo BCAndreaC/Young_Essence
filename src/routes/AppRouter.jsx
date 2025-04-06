@@ -31,7 +31,7 @@ const buttons = [
 
 const AppRouter = () => {
   return (
-    <BrowserRouter basename="/Young_Essence"> 
+    <Router>
       <Navbar logo={logo} menuItems={menuItems} buttons={buttons} />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -43,7 +43,7 @@ const AppRouter = () => {
         <Route path="/pagos" element={<Pagos />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </Router>
   );
 };
 
