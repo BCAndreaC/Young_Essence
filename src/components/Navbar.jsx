@@ -20,7 +20,7 @@ const Navbar = ({ logo, menuItems, buttons }) => {
         <ul className="flex flex-col md:flex-row md:space-x-4">
           {menuItems.map((item, index) => (
             <li key={index}>
-              <a href={item.link} className="block p-2 text-blue-900 hover:bg-pink-600 hover:text-white">
+              <a href={item.link} className="block p-2 hover:bg-pink-400 rounded-md">
                 {item.label}
               </a>
             </li>
@@ -34,8 +34,7 @@ const Navbar = ({ logo, menuItems, buttons }) => {
           <a
             key={index}
             href={button.link}
-            style={{ backgroundColor: '#FF577F', color: '#FFFFFF'}}
-            className="text-white px-4 py-2 rounded-md transition-colors"
+            className="text-white px-4 py-2 hover:bg-pink-400 rounded-md bg-pink-600"
           >
             {button.label}
           </a>

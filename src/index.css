@@ -22,7 +22,7 @@ a {
 a:hover {
   color: whitesmoke;
   background-color: pink;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 body {
@@ -57,3 +57,4 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
