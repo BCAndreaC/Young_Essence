@@ -9,6 +9,7 @@ import Cuenta from "../pages/Account";
 import HelpPage from "../pages/HelpPage";
 import logoSrc from "../assets/ye.png";
 import Pagos from "../pages/Pagos";
+import OrderHistory from "../OrderHistory";
 
 const logo = {
   src: logoSrc,
