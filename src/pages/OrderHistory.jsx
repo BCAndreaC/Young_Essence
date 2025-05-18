@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 // Datos simulados (reemplazar con backend)
+
 const mockOrders = [
   {
     id: 'ORD001',
@@ -91,6 +93,7 @@ export default function OrderHistory() {
                 className="bg-white rounded-lg shadow-md p-4 md:p-6"
               >
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+
                   <div>
                     <h3 className="text-lg font-medium text-neutral-dark">
                       Pedido #{order.id}
