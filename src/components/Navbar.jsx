@@ -1,3 +1,4 @@
+import MenuProyecto from './MenuProyecto';
 import React, { useState } from 'react';
 
 const Navbar = ({ logo, menuItems, buttons }) => {
@@ -11,8 +12,10 @@ const Navbar = ({ logo, menuItems, buttons }) => {
     <header className="bg-pink-300 text-white p-4 flex justify-between items-center">
       {/* Logo */}
       <div className="flex items-center gap-2">
+        <MenuProyecto />
         <img src={logo.src} alt={logo.alt} className="h-12 w-12 rounded-full" />
         <span className="text-xl font-bold">{logo.text}</span>
+        
       </div>
 
       {/* Menú de navegación */}
