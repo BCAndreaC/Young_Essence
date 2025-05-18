@@ -19,7 +19,7 @@ const Footer = () => {
                         Twitter
                     </a>
                 </div>
-                <a href="https://drive.google.com/file/d/1iJ0zTSOsDdeXdEfOjkiY4Dq7hiB-pjVt/view?usp=sharing" className="text-sm text-center text-yellow-100" className="text-pink-200 hover:text-pink-800">¿Quieres saber mas sobre como utilizar nuestro sitio correctamente?<br />Da clic para descargar nuestro Manual de Usuario</a>
+                <a href="https://drive.google.com/file/d/1iJ0zTSOsDdeXdEfOjkiY4Dq7hiB-pjVt/view?usp=sharing" className="text-sm text-center text-yellow-100 text-pink-200 hover:text-pink-800">¿Quieres saber mas sobre como utilizar nuestro sitio correctamente?<br />Da clic para descargar nuestro Manual de Usuario</a>
                 <p className="text-sm text-center text-yellow-100">
                     &copy; 2025 Young. Todos los derechos reservados.
                 </p>

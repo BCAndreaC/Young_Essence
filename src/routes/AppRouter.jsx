@@ -10,6 +10,10 @@ import HelpPage from "../pages/HelpPage";
 import logoSrc from "../assets/ye.png";
 import Pagos from "../pages/Pagos";
 import OrderHistory from "../pages/OrderHistory";
+import Actividades from "../pages/menuProyecto/actividades";
+import Sistema from "../pages/menuProyecto/Sistema";
+import Codigo from "../pages/menuProyecto/Codigo";
+import Reporte from "../pages/menuProyecto/Reporte";
 
 const logo = {
   src: logoSrc,
@@ -43,6 +47,10 @@ const AppRouter = () => {
         <Route path="/help" element={<HelpPage />} />
         <Route path="/pagos" element={<Pagos />} />
         <Route path="/orders" element={<OrderHistory />} />
+        <Route path="/actividades" element={<Actividades/>} />
+        <Route path="/sistema" element={<Sistema/>} />
+        <Route path="/codigo" element={<Codigo/>} />
+        <Route path="/reporte" element={<Reporte/>} />
       </Routes>
       <Footer />
     </Router>
