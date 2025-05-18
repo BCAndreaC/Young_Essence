@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-// Datos simulados (reemplazar con llamada al backend)
+
+// Datos simulados (reemplazar con backend)
+
 const mockOrders = [
   {
     id: 'ORD001',
@@ -30,14 +32,23 @@ export default function OrderHistory() {
 
   // Cargar historial de compras
   useEffect(() => {
-    // Simulación de llamada al backend
     const fetchOrders = async () => {
       try {
-        // Reemplazar con fetch real: const response = await fetch('http://localhost:5050/orders', { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
-        setOrders(mockOrders);
+        const response = await fetch('http://localhost:5050/orders', {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+          },
+        });
+        if (!response.ok) {
+          throw new Error('Error al cargar pedidos');
+        }
+        const data = await response.json();
+        setOrders(data);
         setLoading(false);
       } catch (err) {
-        setError('Error al cargar el historial de compras');
+        console.error(err);
+        setError('No se pudo cargar el historial de compras. Usando datos de prueba.');
+        setOrders(mockOrders); // Fallback a datos simulados
         setLoading(false);
       }
     };
@@ -61,8 +72,12 @@ export default function OrderHistory() {
           Historial de Compras
         </h2>
 
-        {loading && <p className="text-center text-neutral-dark">Cargando...</p>}
-        {error && <p className="text-center text-error">{error}</p>}
+        {loading && (
+          <p className="text-center text-neutral-dark">Cargando pedidos...</p>
+        )}
+        {error && (
+          <p className="text-center text-error bg-error/20 p-2 rounded">{error}</p>
+        )}
 
         {!loading && !error && orders.length === 0 && (
           <p className="text-center text-neutral-dark">
@@ -75,9 +90,10 @@ export default function OrderHistory() {
             {orders.map((order) => (
               <div
                 key={order.id}
-                className="bg-white rounded-lg shadow-md p-4"
+                className="bg-white rounded-lg shadow-md p-4 md:p-6"
               >
-                <div className="flex justify-between items-center">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+
                   <div>
                     <h3 className="text-lg font-medium text-neutral-dark">
                       Pedido #{order.id}
@@ -90,23 +106,23 @@ export default function OrderHistory() {
                       <span
                         className={
                           order.status === 'Entregado'
-                            ? 'text-success'
-                            : 'text-secondary'
+                            ? 'text-success font-medium'
+                            : 'text-secondary font-medium'
                         }
                       >
                         {order.status}
                       </span>
                     </p>
                   </div>
-                  <p className="text-lg font-bold text-primary">
+                  <p className="text-lg font-bold text-primary mt-2 md:mt-0">
                     ${calculateSubtotal(order.items)}
                   </p>
                 </div>
-                <div className="mt-4">
-                  <h4 className="text-sm font-medium text-neutral-dark">
+                <div className="border-t border-neutral-light pt-4">
+                  <h4 className="text-sm font-medium text-neutral-dark mb-2">
                     Productos:
                   </h4>
-                  <ul className="mt-2 space-y-2">
+                  <ul className="space-y-2">
                     {order.items.map((item) => (
                       <li
                         key={item.id}
@@ -125,10 +141,10 @@ export default function OrderHistory() {
           </div>
         )}
 
-        <div className="mt-6 text-center">
+        <div className="mt-8 text-center">
           <button
             onClick={handleBack}
-            className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+            className="inline-flex items-center px-6 py-3 text-sm font-medium text ipsa-white bg-primary rounded-md hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
           >
             Volver a Mi Cuenta
           </button>

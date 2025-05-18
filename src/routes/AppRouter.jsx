@@ -9,7 +9,7 @@ import Cuenta from "../pages/Account";
 import HelpPage from "../pages/HelpPage";
 import logoSrc from "../assets/ye.png";
 import Pagos from "../pages/Pagos";
-import OrderHistory from "../OrderHistory";
+import OrderHistory from "../pages/OrderHistory";
 
 const logo = {
   src: logoSrc,
@@ -42,6 +42,7 @@ const AppRouter = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/help" element={<HelpPage />} />
         <Route path="/pagos" element={<Pagos />} />
+        <Route path="/orders" element={<OrderHistory />} />
       </Routes>
       <Footer />
     </Router>
