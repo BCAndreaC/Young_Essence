@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function Cuenta() {
+  const navigate = useNavigate();
+
   return (
     <div className="max-w-5xl mx-auto p-8 bg-gray-50 min-h-screen">
       {/* User Info */}
@@ -13,7 +17,14 @@ export default function Cuenta() {
           <p className="text-gray-500 ml-8">maria_perez@example.com</p>
         </div>
       </section>
-
+<a
+  onClick={() => navigate("/orders")}
+  className="mb-8 bg-white shadow-md p-4 rounded-2xl text-center hover:shadow-lg transition text-sm text-primary hover:text-secondary cursor-pointer"
+>
+  Historial de Compras
+</a>
+<br />
+<br />
       {/* Favorites */}
       <section className="mb-8">
         <h3 className="text-2xl font-semibold text-gray-700 mb-4">Favoritos</h3>
@@ -44,6 +55,14 @@ export default function Cuenta() {
         <h3 className="text-2xl font-semibold text-gray-700 mb-4">
           Pedidos Realizados
         </h3>
+        <div className="mb-4">
+          <button
+            onClick={() => navigate("/orders")}
+            className="w-full md:w-auto px-6 py-2 bg-primary text-white rounded-md font-medium hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-primary"
+          >
+            Ver Historial de Compras
+          </button>
+        </div>
         <div className="space-y-4">
           <div className="bg-white shadow-md p-6 rounded-2xl flex justify-between items-center">
             <div>
