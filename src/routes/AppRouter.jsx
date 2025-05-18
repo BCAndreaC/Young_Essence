@@ -10,7 +10,7 @@ import HelpPage from "../pages/HelpPage";
 import logoSrc from "../assets/ye.png";
 import Pagos from "../pages/Pagos";
 import OrderHistory from "../pages/OrderHistory";
-import Actividades from "../pages/menuProyecto/actividades";
+import Actividades from "../pages/menuProyecto/Actividades";
 import Sistema from "../pages/menuProyecto/Sistema";
 import Codigo from "../pages/menuProyecto/Codigo";
 import Reporte from "../pages/menuProyecto/Reporte";
