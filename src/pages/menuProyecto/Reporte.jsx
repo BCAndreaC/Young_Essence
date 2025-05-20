@@ -92,9 +92,13 @@ function Reporte() {
             <section>
                 <div className="overflow-x-auto">
                     <h1 className="text-2xl font-bold mb-6">Primeros formatos</h1>
-                    <a href="https://docs.google.com/document/d/1VpP4Hb1E9CeUY4l9d05eUNjyXS53uan6XlgC2mLOg34/edit?usp=sharing"
-                    className="inline-block bg-primary text-style=style=color:rgb(226, 16, 138) px-4 py-2 rounded-md hover:bg-secondary transition"></a>
-                </div>
+                    <a
+  href="https://docs.google.com/document/d/1VpP4Hb1E9CeUY4l9d05eUNjyXS53uan6XlgC2mLOg34/edit?usp=sharing"
+  className="inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700 transition"
+  target="_blank"
+  rel="noopener noreferrer">
+  Ir al documento
+</a>
             </section>
             <br />
             <br />
@@ -102,8 +106,14 @@ function Reporte() {
             <section>
                 <div className="overflow-x-auto">
                     <h1 className="text-2xl font-bold mb-6">Primeros formatos</h1>
-                    <a href="https://docs.google.com/document/d/1NpyR2qeha8JwdpVLERsSW36YSsB-XdLGcuq41hy_7HQ/edit?usp=sharing"
-                    className="inline-block bg-primary text-style=style=color:rgb(226, 16, 138) px-4 py-2 rounded-md hover:bg-secondary transition"></a>
+                    <a
+  href="https://docs.google.com/document/d/1NpyR2qeha8JwdpVLERsSW36YSsB-XdLGcuq41hy_7HQ/edit?usp=sharing"
+  className="inline-block bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700 transition"
+  target="_blank"
+  rel="noopener noreferrer">
+  Ir al documento
+</a>
+
                 </div>
             </section>
             <br />
